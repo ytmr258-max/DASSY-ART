@@ -94,54 +94,25 @@
                 </div>
             </div>
 
-            <!-- גריד יצירות -->
-            <div class="gallery-container">
-                <!-- יצירה 1 -->
-                <figure class="card" data-cat="canvas" data-status="available" onclick="openModal('item1')">
-                    <div class="card-image-wrap">
-                        <img src="https://picsum.photos/id/1062/600/400" alt="זריחה מופשטת">
-                    </div>
-                    <figcaption>
-                        <h3>זריחה מופשטת</h3>
-                        <p class="card-desc">אקריליק על קנווס | 80x60 ס"מ</p>
-                        <div class="card-footer">
-                            <span class="status-text available">זמין לרכישה</span>
-                            <span class="price">₪3,400.00</span>
-                        </div>
-                    </figcaption>
-                </figure>
+            <!-- גריד יצירות --><!-- חפשי את השורה הזו בקובץ -->
+<div class="gallery-container">
 
-                <!-- יצירה 2 -->
-                <figure class="card sold-card" data-cat="wood" data-status="sold" onclick="openModal('item2')">
-                    <div class="card-image-wrap">
-                        <span class="sold-badge">נמכר</span>
-                        <img src="https://picsum.photos/id/1025/600/400" alt="שורשי האלון">
-                    </div>
-                    <figcaption>
-                        <h3>שורשי האלון</h3>
-                        <p class="card-desc">צריבה ידנית על עץ אלון מלא</p>
-                        <div class="card-footer">
-                            <span class="status-text sold">נמכר</span>
-                            <span class="price">₪1,800.00</span>
-                        </div>
-                    </figcaption>
-                </figure>
-
-                <!-- יצירה 3 -->
-                <figure class="card" data-cat="tambourines" data-status="available" onclick="openModal('item3')">
-                    <div class="card-image-wrap">
-                        <img src="https://picsum.photos/id/1069/600/400" alt="תוף מרים מעוצב">
-                    </div>
-                    <figcaption>
-                        <h3>תוף מרים - שירת הים</h3>
-                        <p class="card-desc">עיצוב אומנותי בעבודת יד משולבת</p>
-                        <div class="card-footer">
-                            <span class="status-text available">זמין לרכישה</span>
-                            <span class="price">₪950.00</span>
-                        </div>
-                    </figcaption>
-                </figure>
+    <!-- כאן מניחים את כרטיסיות המוצרים המעודכנות (דוגמה לכרטיסיה אחת): -->
+    <figure class="card sold-card" data-cat="wood" data-status="sold" onclick="openModal('item2')">
+        <div class="card-image-wrap">
+            <span class="sold-badge">נמכר</span>
+            <img src="https://picsum.photos/id/1025/600/400" alt="שורשי האלון">
+        </div>
+        <figcaption>
+            <h3>שורשי האלון</h3>
+            <p class="card-desc">צריבה ידנית על עץ אלון מלא</p>
+            <div class="card-footer">
+                <span class="price">₪1800.00</span>
             </div>
+        </figcaption>
+    </figure>
+
+</div> <!-- סגירת ה-gallery-container -->
         </section>
 
         <!-- טופס הזמנה כללי -->
@@ -228,5 +199,52 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- ... כל תוכן הדף (sections, footer וכו') ... -->
+
+        <!-- 1. מדביקים את ה-Modal ממש כאן: -->
+        <div id="product-modal" class="modal-backdrop" onclick="closeModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-gallery">
+                        <img id="modal-main-img" src="" alt="תמונה ראשית">
+                        <div class="modal-thumbs" id="modal-thumbs"></div>
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-price" class="price"></p>
+                        <p id="modal-desc" class="modal-desc-text"></p>
+                        <hr class="modal-divider">
+                        
+                        <h3 id="modal-form-title">פנייה לגבי יצירה זו</h3>
+                        <form action="https://formspree.io/f/xnpagavb" method="POST" class="custom-form">
+                            <input type="hidden" id="modal-item-name" name="item_name" value="">
+                            <div class="form-group">
+                                <label for="m-name">שם מלא:</label>
+                                <input type="text" id="m-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="m-email">דוא"ל:</label>
+                                <input type="email" id="m-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="m-message">הודעה / בקשה להזמנה דומה:</label>
+                                <textarea id="m-message" name="message" rows="3" placeholder="אשמח לקבל פרטים נוספים..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">שלח פנייה</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. מיד לאחר ה-Modal מופיעים השורות הסוגרות של הדף: -->
+        <footer>
+            <p>&copy; 2026 סטודיו לאמנות ועבודות יד. כל הזכויות שמורות.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
 </body>
 </html>
