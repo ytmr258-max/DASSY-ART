@@ -7,6 +7,7 @@
   --accent-color: #ab856f;
   --card-bg: #ffffff;
   --pill-bg: #eae3db;
+  --focus-ring: #2563eb;
   --font-main: 'Assistant', sans-serif;
   --font-heading: 'Rubik', sans-serif;
 }
@@ -26,10 +27,15 @@ body {
   overflow-x: hidden;
 }
 
-/* סרגל ניווט עליון */
+/* 1. שורת כותרת וסרגל ניווט עליון */
 .navbar {
-  background: transparent;
-  padding: 20px 40px;
+  background-color: rgba(247, 243, 239, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(171, 133, 111, 0.15);
 }
 
 .nav-container {
@@ -41,24 +47,26 @@ body {
 }
 
 .logo img {
-  height: 55px;
+  height: 50px;
   width: auto;
+  display: block;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.2s;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus-visible {
   color: var(--accent-color);
 }
 
@@ -71,6 +79,12 @@ body {
   font-weight: 600;
   font-size: 0.95rem;
   display: inline-block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-dark:hover {
+  background-color: #242220;
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -81,7 +95,6 @@ body {
   margin: 0 auto;
 }
 
-/* אלמנטים עגולים ברקע */
 .bg-shape {
   position: absolute;
   background-color: #ebe2d8;
@@ -107,27 +120,23 @@ body {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 900;
   color: var(--text-primary);
   margin-bottom: 20px;
-  letter-spacing: -1px;
 }
 
 .hero-title .highlight {
   color: var(--accent-color);
-  text-shadow: 2px 2px 8px rgba(171, 133, 111, 0.25);
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
   color: var(--text-secondary);
   margin-bottom: 30px;
-  font-weight: 400;
 }
 
-/* תגיות כפתור */
-.hero-tags {
+.tags-container {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -139,28 +148,193 @@ body {
   color: var(--text-primary);
   padding: 8px 20px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
-/* אזור גלריה */
+/* 2. גלריה בגריד רספונסיבי עם אפקטי מעבר */
 .gallery-section {
-  max-width: 800px;
-  margin: 80px auto 40px;
+  max-width: 1100px;
+  margin: 70px auto 40px;
   padding: 0 20px;
 }
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.section-description, 
+.section-description,
 .section-subdescription {
   font-size: 1.05rem;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto 15px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.04);
+}
+
+.card figcaption {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* 3. טופס יצירת קשר מעוצב ונגיש */
+.form-section {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  text-align: right;
+}
+
+.form-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-section > p {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #e2d9d0;
+  border-radius: 10px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  background-color: #faf8f5;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* הגדרות נגישות לפוקוס */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-color: transparent;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #96705b;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+/* פרטי התקשרות ופוטר */
+.contact-section {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.contact-list {
+  list-style: none;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 25px;
+  background-color: #eae3db;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
