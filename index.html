@@ -10,11 +10,11 @@
 </head>
 <body>
 
-    <!-- סרגל ניווט עליון מעוצב -->
+    <!-- סרגל ניווט עליון -->
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Tamar Logo">
+                <img src="logo.png" alt="DASSY ARTS Logo">
             </div>
             <nav class="nav-links">
                 <a href="#about">עמוד הבית</a>
@@ -28,19 +28,17 @@
     </header>
 
     <main>
-        <!-- אזור Hero מרכזי -->
+        <!-- אזור Hero -->
         <section id="about" class="hero-section">
             <div class="bg-shape shape-left"></div>
             <div class="bg-shape shape-right"></div>
 
             <div class="hero-content">
                 <h1 class="hero-title">ארץ. רוח. <span class="highlight">אומנות.</span></h1>
-                
                 <p class="hero-subtitle">
                     יצירות אומנות בעבודת יד שמשלבות אסתטיקה, חומר ומחשבה.<br>
                     פריטים ייחודיים וציורים בהתאמה אישית, המעניקים אופי ונוכחות מדויקת לחלל שלכם.
                 </p>
-
                 <div class="tags-container">
                     <span class="tag"><i class="icon">✏️</i> עיצוב אישי</span>
                     <span class="tag"><i class="icon">🤎</i> עבודת יד</span>
@@ -49,7 +47,7 @@
             </div>
         </section>
 
-        <!-- אזור גלריית עבודות -->
+        <!-- אזור גלריה -->
         <section id="gallery" class="gallery-section">
             <h2 class="section-title">גלריה</h2>
             <p class="section-description">
@@ -60,58 +58,106 @@
                 העבודות מיוצרות במגוון טכניקות ומיועדות להוסיף נפח, מורשת ואווירה לבית, למשרד או כמתנה בעלת ערך.<br>
                 מוזמנים לעיין באוסף ולמצוא את היצירה שלכם.
             </p>
-            
+
+            <!-- תיבת מידע: אומנות בהתאמה אישית -->
+            <div class="info-card">
+                <h3>🪄 אומנות בהתאמה אישית והזמנות מיוחדות</h3>
+                <div class="info-item">
+                    <strong>✏️ עיצוב אישי:</strong> התאמת מידות, גוונים ומוטיבים לחללים פרטיים או עסקיים.
+                </div>
+                <div class="info-item">
+                    <strong>🎁 מתנות מרגשות:</strong> יצירות ייחודיות לאירועים, לציוני דרך ולמועדים.
+                </div>
+                <div class="info-item">
+                    <strong>📦 אריזה ואיסוף:</strong> כל יצירה נארזת באהבה ובקפדנות, וזמינה לאיסוף עצמי בתאום מראש.<br>
+                    <small>שירות משלוחים בפריסה ארצית יתווסף בקרוב.</small>
+                </div>
+            </div>
+
+            <!-- מסנני חיפוש -->
+            <div class="filter-wrapper">
+                <!-- מסנן קטגוריות -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter-cat="all">הכל</button>
+                    <button class="filter-btn" data-filter-cat="wood">עבודות בעץ</button>
+                    <button class="filter-btn" data-filter-cat="tambourines">תופי מרים</button>
+                    <button class="filter-btn" data-filter-cat="canvas">קנווסים</button>
+                </div>
+
+                <!-- מסנן זמינות -->
+                <div class="status-filters">
+                    <button class="status-btn active" data-filter-status="all">הכל</button>
+                    <span class="divider">|</span>
+                    <button class="status-btn" data-filter-status="available">זמינים לרכישה</button>
+                    <span class="divider">|</span>
+                    <button class="status-btn" data-filter-status="sold">נמכרו</button>
+                </div>
+            </div>
+
+            <!-- גריד יצירות -->
             <div class="gallery-container">
-                <!-- ציור על קנווס -->
-                <figure class="card">
-                    <img src="https://picsum.photos/id/1062/600/400" alt="ציור אבסטרקט על קנווס">
+                <!-- יצירה 1 -->
+                <figure class="card" data-cat="canvas" data-status="available" onclick="openModal('item1')">
+                    <div class="card-image-wrap">
+                        <img src="https://picsum.photos/id/1062/600/400" alt="זריחה מופשטת">
+                    </div>
                     <figcaption>
                         <h3>זריחה מופשטת</h3>
-                        <p>אקריליק על קנווס | 80x60 ס"מ</p>
-                        <p><strong>זמין לרכישה</strong></p>
+                        <p class="card-desc">אקריליק על קנווס | 80x60 ס"מ</p>
+                        <div class="card-footer">
+                            <span class="status-text available">זמין לרכישה</span>
+                            <span class="price">₪3,400.00</span>
+                        </div>
                     </figcaption>
                 </figure>
 
-                <!-- צריבה בעץ -->
-                <figure class="card">
-                    <img src="https://picsum.photos/id/1025/600/400" alt="צריבת עץ של דוגמת טבע">
+                <!-- יצירה 2 -->
+                <figure class="card sold-card" data-cat="wood" data-status="sold" onclick="openModal('item2')">
+                    <div class="card-image-wrap">
+                        <span class="sold-badge">נמכר</span>
+                        <img src="https://picsum.photos/id/1025/600/400" alt="שורשי האלון">
+                    </div>
                     <figcaption>
                         <h3>שורשי האלון</h3>
-                        <p>צריכה ידנית על עץ אלון מלא</p>
-                        <p><strong>זמין לרכישה</strong></p>
+                        <p class="card-desc">צריבה ידנית על עץ אלון מלא</p>
+                        <div class="card-footer">
+                            <span class="status-text sold">נמכר</span>
+                            <span class="price">₪1,800.00</span>
+                        </div>
                     </figcaption>
                 </figure>
 
-                <!-- פיסול / מיניאטורות / עבודות יד -->
-                <figure class="card">
-                    <img src="https://picsum.photos/id/1069/600/400" alt="עבודת יצירה בעץ וחימר">
+                <!-- יצירה 3 -->
+                <figure class="card" data-cat="tambourines" data-status="available" onclick="openModal('item3')">
+                    <div class="card-image-wrap">
+                        <img src="https://picsum.photos/id/1069/600/400" alt="תוף מרים מעוצב">
+                    </div>
                     <figcaption>
-                        <h3>דמות בחימר ועץ</h3>
-                        <p>עבודת יד משולבת | טקסטורה טבעית</p>
-                        <p><em>נמכר (ניתן להזמין דגם דומה)</em></p>
+                        <h3>תוף מרים - שירת הים</h3>
+                        <p class="card-desc">עיצוב אומנותי בעבודת יד משולבת</p>
+                        <div class="card-footer">
+                            <span class="status-text available">זמין לרכישה</span>
+                            <span class="price">₪950.00</span>
+                        </div>
                     </figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- טופס הזמנה מותאמת אישית -->
+        <!-- טופס הזמנה כללי -->
         <section id="custom-order" class="form-section">
             <h2>פנייה לרכישה או הזמנת עיצוב מותאם אישית</h2>
             <p>אהבתם יצירה קיימת? רוצים להזמין מתנה ייחודית או שלט/ציור בהתאמה אישית? מלאו את הפרטים:</p>
-
             <form action="https://formspree.io/f/xnpagavb" method="POST" class="custom-form">
                 <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
-
                 <div class="form-group">
                     <label for="name">שם מלא:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-
                 <div class="form-group">
                     <label for="email">דוא"ל ליצירת קשר:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
                 <div class="form-group">
                     <label for="order-type">סוג הפנייה:</label>
                     <select id="order-type" name="order-type">
@@ -121,12 +167,10 @@
                         <option value="other">ייעוץ / בקשה אחרת</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="message">תיאור הבקשה / פרטים נוספים:</label>
                     <textarea id="message" name="message" rows="5" placeholder="ספרו לנו על היצירה או על הרעיון שלכם..."></textarea>
                 </div>
-
                 <button type="submit" class="submit-btn">שלח פנייה</button>
             </form>
         </section>
@@ -142,9 +186,47 @@
         </section>
     </main>
 
+    <!-- חלון נפתח (Modal) לפרטי יצירה -->
+    <div id="product-modal" class="modal-backdrop" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <img id="modal-main-img" src="" alt="תמונה ראשית">
+                    <div class="modal-thumbs" id="modal-thumbs"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-price" class="modal-price"></p>
+                    <p id="modal-desc" class="modal-desc-text"></p>
+                    <hr class="modal-divider">
+                    
+                    <h3>פנייה לגבי יצירה זו</h3>
+                    <form action="https://formspree.io/f/xnpagavb" method="POST" class="custom-form">
+                        <input type="hidden" id="modal-item-name" name="item_name" value="">
+                        <div class="form-group">
+                            <label for="m-name">שם מלא:</label>
+                            <input type="text" id="m-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="m-email">דוא"ל:</label>
+                            <input type="email" id="m-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="m-message">הודעה / בקשה להזמנה דומות:</label>
+                            <textarea id="m-message" name="message" rows="3" placeholder="אשמח לקבל פרטים נוספים..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">שלח פנייה עבור יצירה זו</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 סטודיו לאמנות ועבודות יד. כל הזכויות שמורות.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
