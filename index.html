@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>גלריית אמנות ועבודות יד - פורטפוליו</title>
+    <title>אומנות יד - Dssy Arts</title>
 </head>
 <body>
 
@@ -24,17 +24,16 @@
     <main>
         <!-- אזור אודות -->
         <section id="about">
-            <h1>אמנות מקורית & עבודות יד</h1>
+            <h1>ארץ.רוח.אומנות.</h1>
             <p>
-                ברוכים הבאים לגלריה שלי. כאן תמצאו יצירות אמנות ייחודיות במגוון טכניקות: 
-                ציורי קנווס מקוריים, צריכה ועבודות גילוף בעץ, עבודות חימר ומיניאטורות. 
-                כל פריט נוצר בעבודת יד מוקפדת מתוך תשוקה לחומר ולטקסטורה.
+               יצירות אומנות בעבודת יד שמשלבות אסתטיקה, חומר ומחשבה.
+פריטים ייחודיים וציורים בהתאמה אישית, המעניקים אופי ונוכחות מדויקת לחלל שלכם.
             </p>
         </section>
 
         <!-- גלריית עבודות -->
         <section id="gallery">
-            <h2>גלריית עבודות</h2>
+            <h2>גלריה</h2>
             
             <div class="gallery-container">
                 <!-- ציור על קנווס -->
@@ -97,8 +96,8 @@
                     <label for="order-type">סוג הפנייה:</label><br>
                     <select id="order-type" name="order-type">
                         <option value="purchase">רכישת יצירה קיימת מהגלריה</option>
-                        <option value="custom-wood">הזמנת עבודת צריכה / גילוף בעץ</option>
-                        <option value="custom-canvas">הזמנת ציור קנווס מותאם אישית</option>
+                        <option value="custom-wood">הזמנת עבודת צריבה</option>
+                        <option value="custom-canvas">הזמנת קנווס בעיצוב אישי</option>
                         <option value="other">ייעוץ / בקשה אחרת</option>
                     </select>
                 </div>
@@ -107,7 +106,7 @@
 
                 <div>
                     <label for="message">תיאור הבקשה / פרטים נוספים:</label><br>
-                    <textarea id="message" name="message" rows="5" placeholder="ספרו לי על הרעיון שלכם, גדלים מבוקשים או היצירה שתרצו לרכוש..."></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="ספרו לנו על היצירה או על הרעיון שלכם..."></textarea>
                 </div>
 
                 <br>
@@ -122,25 +121,14 @@
             <p>ניתן ליצור קשר גם בדרכים הבאות:</p>
             <ul>
                 <li>דוא"ל: studio@example.com</li>
-                <li>אינסטגרם / פייסבוק: @ArtistStudio</li>
+                <li>זמינים עבורכם לשיחת טלפון וייעוץ אישי במספר: 0583267111</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 סטודיו לאמנות وعבודות יד. כל הזכויות שמורות.</p>
+        <p>&copy; 2026 סטודיו לאמנות ועבודות יד. כל הזכויות שמורות.</p>
     </footer>
-    
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
 </script>
 </body>
 </html>
