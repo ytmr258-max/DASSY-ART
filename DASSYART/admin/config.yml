@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/gallery"
+public_folder: "images/gallery"
+
+collections:
+  - name: "gallery"
+    label: "יצירות בגלריה"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "כותרת היצירה", name: "title", widget: "string" }
+      - { label: "תמונה", name: "image", widget: "image" }
+      - { label: "טכניקה / חומרים", name: "technique", widget: "string" }
+      - { label: "מידות / פרטים", name: "details", widget: "string" }
+      - { label: "סטטוס", name: "status", widget: "select", options: ["זמין לרכישה", "נמכר (ניתן להזמין דגם דומה)", "לא למכירה"] }
+      - { label: "תיאור נוסף", name: "description", widget: "text", required: false }
