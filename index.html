@@ -5,55 +5,61 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אומנות יד - Dssy Arts</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>DASSY ARTS - אומנות יד</title>
 </head>
 <body>
 
-    <!-- תפריט ניווט -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">אודות היצירה</a></li>
-                <li><a href="#gallery">גלריית עבודות</a></li>
-                <li><a href="#custom-order">הזמנה מותאמת אישית</a></li>
-                <li><a href="#contact">יצירת קשר</a></li>
-            </ul>
-        </nav>
+    <!-- סרגל ניווט עליון מעוצב -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="DASSY ARTS Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#about">עמוד הבית</a>
+                <a href="#gallery">גלריה</a>
+                <a href="#contact">צור קשר</a>
+            </nav>
+            <div class="nav-btn">
+                <a href="#custom-order" class="btn-dark">✨ עיצוב אישי</a>
+            </div>
+        </div>
     </header>
 
     <main>
-    <section class="hero-section">
-  <h1 class="hero-title">ארץ. רוח. <span class="highlight">אומנות.</span></h1>
-  
-  <p class="hero-subtitle">
-    יצירות אומנות בעבודת יד שמשלבות אסתטיקה, חומר ומחשבה.<br>
-    פריטים ייחודיים וציורים בהתאמה אישית, המעניקים אופי ונוכחות מדויקת לחלל שלכם.
-  </p>
+        <!-- אזור Hero מרכזי -->
+        <section id="about" class="hero-section">
+            <div class="bg-shape shape-left"></div>
+            <div class="bg-shape shape-right"></div>
 
-  <div class="tags-container">
-    <span class="tag"><i class="icon">✏️</i> עיצוב אישי</span>
-    <span class="tag"><i class="icon">🤎</i> עבודת יד</span>
-    <span class="tag"><i class="icon">⚡</i> שירות מהיר</span>
-  </div>
+            <div class="hero-content">
+                <h1 class="hero-title">ארץ. רוח. <span class="highlight">אומנות.</span></h1>
+                
+                <p class="hero-subtitle">
+                    יצירות אומנות בעבודת יד שמשלבות אסתטיקה, חומר ומחשבה.<br>
+                    פריטים ייחודיים וציורים בהתאמה אישית, המעניקים אופי ונוכחות מדויקת לחלל שלכם.
+                </p>
 
-  <h2 class="section-title">גלריה</h2>
-  <p class="section-description">
-    הגלריה מציגה עבודות אומנות מקוריות המחוברות לנופי הארץ, לרוח הירושלמית ולמסורת היהודית.<br>
-    היצירות תוכננו תוך שימת דגש על איכות החומר, טקסטורה מעמיקה וחיבור בין מסורת לעיצוב עכשווי.
-  </p>
-</section>
-        <!-- אזור אודות -->
-        <section id="about">
-            <h1>ארץ.רוח.אומנות.</h1>
-            <p>
-               יצירות אומנות בעבודת יד שמשלבות אסתטיקה, חומר ומחשבה.
-פריטים ייחודיים וציורים בהתאמה אישית, המעניקים אופי ונוכחות מדויקת לחלל שלכם.
-            </p>
+                <div class="tags-container">
+                    <span class="tag"><i class="icon">✏️</i> עיצוב אישי</span>
+                    <span class="tag"><i class="icon">🤎</i> עבודת יד</span>
+                    <span class="tag"><i class="icon">⚡</i> שירות מהיר</span>
+                </div>
+            </div>
         </section>
 
-        <!-- גלריית עבודות -->
-        <section id="gallery">
-            <h2>גלריה</h2>
+        <!-- אזור גלריית עבודות -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">גלריה</h2>
+            <p class="section-description">
+                הגלריה מציגה עבודות אומנות מקוריות המחוברות לנופי הארץ, לרוח הירושלמית ולמסורת היהודית.<br>
+                היצירות תוכננו תוך שימת דגש על איכות החומר, טקסטורה מעמיקה וחיבור בין מסורת לעיצוב עכשווי.
+            </p>
+            <p class="section-subdescription">
+                העבודות מיוצרות במגוון טכניקות ומיועדות להוסיף נפח, מורשת ואווירה לבית, למשרד או כמתנה בעלת ערך.<br>
+                מוזמנים לעיין באוסף ולמצוא את היצירה שלכם.
+            </p>
             
             <div class="gallery-container">
                 <!-- ציור על קנווס -->
@@ -88,32 +94,26 @@
             </div>
         </section>
 
-        <!-- טופס בקשת עיצוב אישי או פנייה לרכישה -->
-        <section id="custom-order">
+        <!-- טופס הזמנה מותאמת אישית -->
+        <section id="custom-order" class="form-section">
             <h2>פנייה לרכישה או הזמנת עיצוב מותאם אישית</h2>
             <p>אהבתם יצירה קיימת? רוצים להזמין מתנה ייחודית או שלט/ציור בהתאמה אישית? מלאו את הפרטים:</p>
 
-            <form action="https://formspree.io/f/xnpagavb" method="POST">
-    <!-- שורת ההפניה לדף התודה -->
-    <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+            <form action="https://formspree.io/f/xnpagavb" method="POST" class="custom-form">
+                <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
 
-    <!-- שאר שדות הטופס (שם, אימייל, הודעה וכד') -->
-                <div>
-                    <label for="name">שם מלא:</label><br>
+                <div class="form-group">
+                    <label for="name">שם מלא:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
 
-                <br>
-
-                <div>
-                    <label for="email">דוא"ל ליצירת קשר:</label><br>
+                <div class="form-group">
+                    <label for="email">דוא"ל ליצירת קשר:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
-                <br>
-
-                <div>
-                    <label for="order-type">סוג הפנייה:</label><br>
+                <div class="form-group">
+                    <label for="order-type">סוג הפנייה:</label>
                     <select id="order-type" name="order-type">
                         <option value="purchase">רכישת יצירה קיימת מהגלריה</option>
                         <option value="custom-wood">הזמנת עבודת צריבה</option>
@@ -122,26 +122,22 @@
                     </select>
                 </div>
 
-                <br>
-
-                <div>
-                    <label for="message">תיאור הבקשה / פרטים נוספים:</label><br>
+                <div class="form-group">
+                    <label for="message">תיאור הבקשה / פרטים נוספים:</label>
                     <textarea id="message" name="message" rows="5" placeholder="ספרו לנו על היצירה או על הרעיון שלכם..."></textarea>
                 </div>
 
-                <br>
-
-                <button type="submit">שלח פנייה</button>
+                <button type="submit" class="submit-btn">שלח פנייה</button>
             </form>
         </section>
 
-        <!-- אזור יצירת קשר ישיר -->
-        <section id="contact">
+        <!-- פרטי התקשרות -->
+        <section id="contact" class="contact-section">
             <h2>פרטי התקשרות</h2>
             <p>ניתן ליצור קשר גם בדרכים הבאות:</p>
-            <ul>
-                <li>דוא"ל: studio@example.com</li>
-                <li>זמינים עבורכם לשיחת טלפון וייעוץ אישי במספר: 0583267111</li>
+            <ul class="contact-list">
+                <li>✉️ דוא"ל: studio@example.com</li>
+                <li>📞 זמינים עבורכם לשיחת טלפון וייעוץ אישי במספר: 0583267111</li>
             </ul>
         </section>
     </main>
@@ -149,6 +145,6 @@
     <footer>
         <p>&copy; 2026 סטודיו לאמנות ועבודות יד. כל הזכויות שמורות.</p>
     </footer>
-</script>
+
 </body>
 </html>

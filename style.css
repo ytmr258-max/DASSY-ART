@@ -1,78 +1,166 @@
-/* יבוא גופן עבה וכבד לכותרות מ-Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800;900&family=Assistant:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Rubik:wght@700;800;900&display=swap');
 
-body {
-  background-color: #f5f0eb; /* רקע שמנת-חול חם */
-  color: #5a524c;
-  font-family: 'Assistant', sans-serif;
-  text-align: center;
+:root {
+  --bg-color: #f7f3ef;
+  --text-primary: #3d312a;
+  --text-secondary: #706359;
+  --accent-color: #ab856f;
+  --card-bg: #ffffff;
+  --pill-bg: #eae3db;
+  --font-main: 'Assistant', sans-serif;
+  --font-heading: 'Rubik', sans-serif;
 }
 
-/* אזור כותרת ראשית */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* סרגל ניווט עליון */
+.navbar {
+  background: transparent;
+  padding: 20px 40px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.btn-dark {
+  background-color: #3b3734;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+/* Hero Section */
 .hero-section {
-  padding: 4rem 1rem 2rem 1rem;
-  max-width: 800px;
+  position: relative;
+  padding: 60px 20px 40px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* כותרת מובלטת וגדולה */
+/* אלמנטים עגולים ברקע */
+.bg-shape {
+  position: absolute;
+  background-color: #ebe2d8;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.shape-left {
+  width: 280px;
+  height: 280px;
+  left: -200px;
+  bottom: -50px;
+  opacity: 0.7;
+}
+
+.shape-right {
+  width: 320px;
+  height: 320px;
+  right: -220px;
+  top: -80px;
+  opacity: 0.7;
+}
+
 .hero-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-heading);
+  font-size: 4rem;
   font-weight: 900;
-  font-size: 3.5rem;
-  color: #3b302a; /* חום כהה */
-  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
   letter-spacing: -1px;
 }
 
-/* הצללה ואפקט מילים מתחלפות/מודגשות */
 .hero-title .highlight {
-  color: #cbb299; /* חום-זהב בהיר */
-  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* הצללה רכה */
+  color: var(--accent-color);
+  text-shadow: 2px 2px 8px rgba(171, 133, 111, 0.25);
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  line-height: 1.6;
-  color: #6e645e;
-  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 
-/* תגיות עגולות (Pills) */
-.tags-container {
+/* תגיות כפתור */
+.hero-tags {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 4rem;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .tag {
-  background-color: #ffffff;
-  color: #4a4039;
-  border-radius: 50px;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.95rem;
+  background-color: var(--pill-bg);
+  color: var(--text-primary);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
 }
 
-/* כותרת גלריה */
+/* אזור גלריה */
+.gallery-section {
+  max-width: 800px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+}
+
 .section-title {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 900;
-  font-size: 2.2rem;
-  color: #3b302a;
-  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
 }
 
-.section-description {
-  font-size: 1rem;
-  color: #7a7069;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
+.section-description, 
+.section-subdescription {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
 }
