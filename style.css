@@ -15,15 +15,11 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
- body {
   font-family: var(--font-main);
-  background-color: #f7f3ef; /* גוון בסיס חם */
-  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png'); /* טקסטורת העץ */
-  background-repeat: repeat; /* דואג שהטקסטורה תכסה את כל הרקע בצורה רציפה */
+  background-color: var(--bg-color);
   color: var(--text-primary);
   text-align: center;
   line-height: 1.6;
-}
 }
 
 /* Navbar */
