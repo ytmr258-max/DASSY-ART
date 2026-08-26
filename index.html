@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -8,6 +9,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>DASSY ART - סטודיו לאומנות יד</title>
 </head>
+
 <body>
 
     <!-- סרגל ניווט עליון -->
@@ -66,7 +68,7 @@
                 </div>
                 <div class="info-item">
                     <strong>📦 אריזה ואיסוף:</strong> כל יצירה נארזת באהבה ובקפדנות, וזמינה לאיסוף עצמי בתאום מראש.<br>
-                    <small>שירות משלוחים בפריסה ארצית יתווסף בקרוב            .</small>
+                    <small>שירות משלוחים בפריסה ארצית יתווסף בקרוב .</small>
                 </div>
             </div>
 
@@ -92,29 +94,17 @@
 
             <!-- גריד יצירות -->
             <div class="gallery-container">
-                <article class="gallery-item" 
-                    data-title="תדרוש גאולה לגלותנו" 
-                     data-price="₪450" 
-                     data-desc="תוף מרים בעיצוב מינימליסטי ומרגש עם הכיתוב: 'תדרוש גאולה לגלותנו'. קוטר: 21 סמ."
-                     data-images='["images/tidrosh.jpg", "images/canvas-jerusalem-detail.jpg"]'>
-              <figure>
-                 <img src="images/tidrosh.jpg" alt="תדרוש גאולה לגלותנו">
-                    <figcaption>
-                        <h3>תדרוש גאולה לגלותנו</h3>
-                     <p class="price">₪450</p>
-                   </figcaption>
-                </figure>
-            </article>
-                <!-- יצירה 1: קנווס -->
-                <figure class="card" data-cat="canvas" data-status="available" onclick="openModal('item1')">
+                <!-- יצירה 1: תף מרים -->
+                <figure class="card" data-cat="tambourine" data-status="available" onclick="openModal('item1')">
                     <div class="card-image-wrap">
-                        <img src="https://picsum.photos/id/1062/600/400" alt="זריחה מופשטת">
+                        <img src="images/tidrosh.jpg" alt="תדרוש גאולה לגלותנו">
                     </div>
                     <figcaption>
-                        <h3>זריחה מופשטת</h3>
-                        <p class="card-desc">אקריליק על קנווס | 80x60 ס"מ</p>
+                        <h3>תדרוש גאולה לגלותנו</h3>
+                        <p class="card-desc">תוף מרים בעיצוב מינימליסטי ומרגש עם הכיתוב 'תדרוש גאולה לגלותנו'. קוטר: 21
+                            ס״מ</p>
                         <div class="card-footer">
-                            <span class="price">₪3400.00</span>
+                            <span class="price">₪450</span>
                         </div>
                     </figcaption>
                 </figure>
@@ -158,8 +148,8 @@
                 <!-- הפנייה לעמוד התודה המעוצב -->
                 <input type="hidden" name="_next" value="https://ytmr258-max.github.io/DASSY-ART/thanks.html">
                 <!-- ביטול חלון ה-Captcha כדי שהטופס יישלח מיד -->
-                <input type="hidden" name="_captcha" value="false">                
-                
+                <input type="hidden" name="_captcha" value="false">
+
                 <div class="form-group">
                     <label for="name">שם מלא:</label>
                     <input type="text" id="name" name="name" required>
@@ -179,7 +169,8 @@
                 </div>
                 <div class="form-group">
                     <label for="message">תיאור הבקשה / פרטים נוספים:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="ספרו לנו על היצירה או על הרעיון שלכם..."></textarea>
+                    <textarea id="message" name="message" rows="5"
+                        placeholder="ספרו לנו על היצירה או על הרעיון שלכם..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">שלח פנייה</button>
             </form>
@@ -210,12 +201,13 @@
                     <p id="modal-price" class="price"></p>
                     <p id="modal-desc" class="modal-desc-text"></p>
                     <hr class="modal-divider">
-                    
+
                     <h3 id="modal-form-title">פנייה לגבי יצירה זו</h3>
-                    <form action="https://formsubmit.co/ytmr258@gmail.com" method="POST" class="custom-form">                    <!-- הפנייה לעמוד התודה המעוצב -->
-                    <input type="hidden" name="_next" value="https://ytmr258-max.github.io/DASSY-ART/thanks.html">
-                    <!-- ביטול חלון ה-Captcha -->
-                    <input type="hidden" name="_captcha" value="false">                        
+                    <form action="https://formsubmit.co/ytmr258@gmail.com" method="POST" class="custom-form">
+                        <!-- הפנייה לעמוד התודה המעוצב -->
+                        <input type="hidden" name="_next" value="https://ytmr258-max.github.io/DASSY-ART/thanks.html">
+                        <!-- ביטול חלון ה-Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" id="modal-item-name" name="item_name" value="">
                         <div class="form-group">
                             <label for="m-name">שם מלא:</label>
@@ -227,7 +219,8 @@
                         </div>
                         <div class="form-group">
                             <label for="m-message">הודעה / בקשה להזמנה דומה:</label>
-                            <textarea id="m-message" name="message" rows="3" placeholder="אשמח לקבל פרטים נוספים..."></textarea>
+                            <textarea id="m-message" name="message" rows="3"
+                                placeholder="אשמח לקבל פרטים נוספים..."></textarea>
                         </div>
                         <button type="submit" class="submit-btn">שלח פנייה עבור יצירה זו</button>
                     </form>
@@ -242,4 +235,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
