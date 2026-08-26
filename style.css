@@ -15,15 +15,11 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: var(--font-main);
-    background-image: url('https://avi-home.co.il/wp-content/uploads/2021/01/AS377461.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--text-primary);
-    text-align: center;
-    line-height: 1.6;
+    background-image: url('images/reka.png');
+    background-size: cover;       /* התמונה תכסה את כל גודל המסך */
+    background-position: center;   /* התמונה תמורכז */
+    background-repeat: no-repeat; /* מונע מהתמונה לחזור על עצמה */
+    background-attachment: fixed; /* שומר על תמונת הרקע קבועה בזמן גלילה */
 }
 
 /* Navbar */
