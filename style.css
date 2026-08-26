@@ -15,12 +15,15 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: var(--font-main);
-  /*background-color: var(--bg-color);*/
-  background-color: rgb(177 139 124 / 23%);
-  color: var(--text-primary);
-  text-align: center;
-  line-height: 1.6;
+    font-family: var(--font-main);
+    background-image: url('https://avi-home.co.il/wp-content/uploads/2021/01/AS377461.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    text-align: center;
+    line-height: 1.6;
 }
 
 /* Navbar */
