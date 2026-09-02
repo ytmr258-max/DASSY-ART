@@ -30,6 +30,25 @@ const itemsData = {
             "https://picsum.photos/id/1062/600/400"
         ]
     }
+    item4: {
+        title: "עמק הארזים",
+        price: "₪3400.00",
+        isSold: false,
+        desc: "תיעוד מרהיב של שיטפון בעמק הארזים. מידות: 100*60 סמ ",
+        images: [
+            "images/DSC03088.jpg"
+
+        ]
+    }
+    item5: {
+        title: "מערת אצבע",
+        price: "₪2800.00",
+        isSold: false,
+        desc: "מבט לנוף הכרמל הנושק לים מתוך מערת אצבע. מידות: 80*60 סמ",
+        images: [
+           "images/DSC03084.jpg"
+        ]
+    }
 };
 
 // 1. מנגנון סינון קטגוריות וזמינות
