@@ -29,7 +29,7 @@ const itemsData = {
             "https://picsum.photos/id/1069/600/400",
             "https://picsum.photos/id/1062/600/400"
         ]
-    }
+    },
     item4: {
         title: "עמק הארזים",
         price: "₪3400.00",
@@ -39,7 +39,7 @@ const itemsData = {
             "images/DSC03088.jpg"
 
         ]
-    }
+    },
     item5: {
         title: "מערת אצבע",
         price: "₪2800.00",
