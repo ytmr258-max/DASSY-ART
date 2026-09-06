@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>גלריית אמנות | אומנות מקורית וקנווסים</title>
+    <title>גלריית אמנות | DASSY ART</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
-    <!-- ניווט עליון נקי -->
+    <!-- ניווט עליון -->
     <header class="site-header">
         <div class="header-inner">
             <div class="brand-logo">
@@ -25,29 +25,28 @@
     </header>
 
     <main>
-        <!-- Hero נקי וממוקד קנווסים -->
+        <!-- Hero -->
         <section id="hero" class="hero-block">
             <div class="hero-text">
                 <span class="sub-title">אומנות מקורית בעבודת יד</span>
-                <h1>ציורי קנווס, טקסטורות ורוח</h1>
-                <p>יצירות אמנות ייחודיות המשלבות ציור על קנווסים בצבעי מים ואקריליק, לצד עבודות צריבה בעץ, מיניאטורות 3D ותופי מרים מעוצבים.</p>
+                <h1>ציורי קנווס, עץ, טקסטורות ורוח</h1>
+                <p>יצירות אומנות מגוונות – מציורי קנווס רחבי ידיים ועד לעבודות עץ, מיניאטורות 3D ותופי מרים מעוצבים.</p>
                 <a href="#gallery" class="cta-button">לצפייה בגלריה</a>
             </div>
         </section>
 
-        <!-- גלריה הראשית -->
+        <!-- גלריית יצירות -->
         <section id="gallery" class="gallery-block">
             <div class="section-header">
                 <h2>הגלריה</h2>
-                <p>סינון לפי טכניקה וסגנון יצירה</p>
             </div>
 
-            <!-- סינון קטגוריות -->
+            <!-- סרגלי סינון -->
             <div class="filter-bar">
                 <button class="filter-btn active" data-cat="all">הכל</button>
                 <button class="filter-btn" data-cat="canvas">ציורי קנווס</button>
                 <button class="filter-btn" data-cat="wood">צריבה על עץ</button>
-                <button class="filter-btn" data-cat="paints">מים ואקריליק</button>
+                <button class="filter-btn" data-cat="paints">צבעי מים ואקריליק</button>
                 <button class="filter-btn" data-cat="miniatures">מיניאטורות 3D</button>
                 <button class="filter-btn" data-cat="tambourines">תופי מרים</button>
             </div>
@@ -63,10 +62,10 @@
                     <div class="art-details">
                         <span class="art-cat">ציור קנווס</span>
                         <h3>עמק הארזים</h3>
-                        <p>תיעוד שיטפון עוצמתי בעמק הארזים. 100*60 ס"מ</p>
+                        <p>תיעוד שיטפון בעמק הארזים. 100*60 ס"מ</p>
                         <div class="art-meta">
                             <span class="price">₪3,400</span>
-                            <span class="status available">זמין לרכישה</span>
+                            <span class="status">זמין לרכישה</span>
                         </div>
                     </div>
                 </article>
@@ -82,7 +81,7 @@
                         <p>מבט מתוך המערה אל נוף הכרמל והים. 80*60 ס"מ</p>
                         <div class="art-meta">
                             <span class="price">₪2,800</span>
-                            <span class="status available">זמין לרכישה</span>
+                            <span class="status">זמין לרכישה</span>
                         </div>
                     </div>
                 </article>
@@ -95,16 +94,16 @@
                     <div class="art-details">
                         <span class="art-cat">תוף מרים</span>
                         <h3>תדרוש גאולה לגלותנו</h3>
-                        <p>עיצוב טיפוגרפי נקי על תוף מרים. קוטר 21 ס"מ</p>
+                        <p>תוף מרים בעיצוב טיפוגרפי. קוטר 21 ס"מ</p>
                         <div class="art-meta">
                             <span class="price">₪450</span>
-                            <span class="status available">זמין לרכישה</span>
+                            <span class="status">זמין לרכישה</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- צריבה בעץ (נמכר) -->
-                <article class="art-card sold" data-cat="wood" onclick="openModal('item2')">
+                <!-- עבודת עץ (נמכר) -->
+                <article class="art-card" data-cat="wood" onclick="openModal('item2')">
                     <div class="art-thumb">
                         <span class="badge-sold">נמכר</span>
                         <img src="https://picsum.photos/id/1025/600/400" alt="שורשי האלון">
@@ -112,7 +111,7 @@
                     <div class="art-details">
                         <span class="art-cat">צריבה על עץ</span>
                         <h3>שורשי האלון</h3>
-                        <p>עבודת צריבה מדויקת על עץ אלון מלא</p>
+                        <p>צריבה ידנית מדויקת על עץ אלון מלא</p>
                         <div class="art-meta">
                             <span class="price">₪1,800</span>
                             <span class="status is-sold">נמכר</span>
@@ -123,19 +122,17 @@
             </div>
         </section>
 
-        <!-- אזור "על האמן" -->
+        <!-- על האמן -->
         <section id="about-artist" class="about-block">
-            <div class="about-content">
-                <h2>על האמן והציור</h2>
-                <p>הסטודיו מתמחה ביצירת אומנות ויזואלית מגוונת, החל מציורי קנווס רחבי היקף בעלי טקסטורות עשירות בצבעי אקריליק ומים, ועד לעבודות זעירות של מיניאטורות 3D, צריבה בעץ ועיצוב תופי מרים ייחודיים. כל יצירה מיוצרת בקפדנות ובחשיבה על החלל שבו היא תשתלב.</p>
-            </div>
+            <h2>על האמן והסטודיו</h2>
+            <p>הסטודיו מתמחה ביצירת אומנות מגוונת המשלבת חומר, טקסטורה וצבע – החל מציורי קנווס גדולים בצבעי מים ואקריליק, דרך עבודות צריבה מדויקות בעץ, ועד למיניאטורות 3D ותופי מרים מעוצבים.</p>
         </section>
 
-        <!-- טופס יצירת קשר -->
+        <!-- יצירת קשר -->
         <section id="contact-section" class="contact-block">
             <div class="contact-card">
-                <h2>פנייה לאמן / הזמנה אישית</h2>
-                <p>מעוניינים ברכישה, ייעוץ או הזמנת יצירה בהתאמה אישית? השאירו פרטים:</p>
+                <h2>פנייה לאמן והזמנה אישית</h2>
+                <p>מעוניינים בציור מותאם אישית או ברכישת יצירה מהגלריה? השאירו פרטים:</p>
                 
                 <form action="https://formsubmit.co/ytmr258@gmail.com" method="POST" class="main-form">
                     <input type="hidden" name="_next" value="https://ytmr258-max.github.io/DASSY-ART/thanks.html">
@@ -148,19 +145,19 @@
 
                     <select name="subject">
                         <option value="canvas">הזמנת ציור קנווס מותאם אישית</option>
-                        <option value="general-item">רכישת יצירה קיימת מהגלריה</option>
-                        <option value="wood-burning">עבודת צריבה בעץ / תוף מרים</option>
-                        <option value="other">פנייה כללית / ייעוץ</option>
+                        <option value="purchase">רכישת יצירה קיימת מהגלריה</option>
+                        <option value="wood">עבודת צריבה בעץ / תוף מרים</option>
+                        <option value="other">ייעוץ / פנייה כללית</option>
                     </select>
 
-                    <textarea name="message" rows="4" placeholder="תוכן ההודעה..." required></textarea>
+                    <textarea name="message" rows="4" placeholder="פירוט הבקשה..." required></textarea>
 
-                    <button type="submit" class="send-btn">שליחת הודעה</button>
+                    <button type="submit" class="send-btn">שלח פנייה</button>
                 </form>
 
                 <div class="direct-contact">
-                    <span>📞 טלפון: 058-3267111</span>
-                    <span>✉️ דוא"ל: studio@example.com</span>
+                    <span>📞 058-3267111</span>
+                    <span>✉️ studio@example.com</span>
                 </div>
             </div>
         </section>
@@ -179,9 +176,6 @@
                     <div id="modal-price" class="modal-price"></div>
                     <p id="modal-desc"></p>
                     
-                    <hr>
-
-                    <h3>התעניינות ביצירה זו</h3>
                     <form action="https://formsubmit.co/ytmr258@gmail.com" method="POST" class="modal-form">
                         <input type="hidden" name="_next" value="https://ytmr258-max.github.io/DASSY-ART/thanks.html">
                         <input type="hidden" name="_captcha" value="false">

@@ -1,11 +1,9 @@
 :root {
-    --bg-main: #fafafa;
-    --card-bg: #ffffff;
-    --text-dark: #121212;
-    --text-muted: #666666;
-    --border-color: #eee;
-    --accent: #111;
-    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --text-dark: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.92); /* שקיפות עדינה שמבליטה את העץ ברקע */
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 * {
@@ -15,7 +13,13 @@
 }
 
 body {
-    background-color: var(--bg-main);
+    /* טעינת תמונת העץ כרקע קבוע לכל האתר */
+    background-image: url('images/reka.jpg'), url('reka.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f4f4f4;
     color: var(--text-dark);
     font-family: var(--font);
     direction: rtl;
@@ -24,7 +28,8 @@ body {
 
 /* Header */
 .site-header {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -41,32 +46,28 @@ body {
 }
 
 .brand-logo img {
-    height: 38px;
+    height: 40px;
 }
 
 .main-nav a {
     color: var(--text-dark);
     text-decoration: none;
     margin-right: 20px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95rem;
-    transition: opacity 0.2s;
 }
 
-.main-nav a:hover {
-    opacity: 0.6;
-}
-
-/* Hero */
+/* Hero Section עם רקע חצי שקוף */
 .hero-block {
-    padding: 90px 20px 70px;
+    padding: 80px 20px 60px;
     text-align: center;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(4px);
     border-bottom: 1px solid var(--border-color);
 }
 
 .hero-text {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
@@ -75,50 +76,41 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-muted);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .hero-text h1 {
     font-size: 2.8rem;
     margin: 15px 0;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-weight: 800;
 }
 
 .hero-text p {
     color: var(--text-muted);
     font-size: 1.1rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .cta-button {
     display: inline-block;
     background: var(--text-dark);
     color: #fff;
-    padding: 12px 30px;
+    padding: 12px 32px;
     text-decoration: none;
     border-radius: 4px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-/* Gallery */
+/* Gallery Section */
 .gallery-block {
     max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 25px;
+    margin: 50px auto;
+    padding: 0 20px;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.section-header h2 {
-    font-size: 2rem;
-}
-
-.section-header p {
-    color: var(--text-muted);
+    margin-bottom: 25px;
 }
 
 .filter-bar {
@@ -126,16 +118,17 @@ body {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .filter-btn {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: 600;
     transition: all 0.2s;
 }
 
@@ -145,68 +138,79 @@ body {
     border-color: var(--text-dark);
 }
 
+/* גריד דינמי - מתאים גבהים ורוחב של פריטים שונים */
 .art-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 25px;
+    align-items: start; /* מאפשר לכרטיסים להיות בגבהים טבעיים שונים */
 }
 
 .art-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .art-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
+/* מסגרת התמונה השומרת על יחס התמונה המקורית בלי לחתוך אותה */
 .art-thumb {
     position: relative;
-    height: 260px;
-    background: #f0f0f0;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 .art-thumb img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 380px;
+    object-fit: contain; /* שומר על הפרופורציה המקורית של הקנווס/התוף/המיניאטורה */
+    border-radius: 4px;
 }
 
 .badge-sold {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #a00;
+    top: 15px;
+    right: 15px;
+    background: #b91c1c;
     color: #fff;
     font-size: 0.75rem;
-    padding: 3px 8px;
-    border-radius: 3px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
 }
 
 .art-details {
-    padding: 20px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .art-cat {
     font-size: 0.75rem;
     color: var(--text-muted);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .art-details h3 {
-    font-size: 1.2rem;
-    margin: 5px 0;
+    font-size: 1.15rem;
+    margin: 4px 0;
 }
 
 .art-details p {
     font-size: 0.88rem;
     color: var(--text-muted);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .art-meta {
@@ -214,94 +218,75 @@ body {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--border-color);
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 .price {
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 1.05rem;
 }
 
 .status {
     font-size: 0.8rem;
-    color: #2e7d32;
+    color: #15803d;
+    font-weight: 600;
 }
 
 .status.is-sold {
     color: var(--text-muted);
 }
 
-/* About Block */
+/* בלוקים נוספים ברקע שקוף למחצה */
+.about-block, .contact-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
 .about-block {
-    background: #ffffff;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 70px 20px;
+    max-width: 900px;
+    margin: 50px auto;
     text-align: center;
 }
 
-.about-content {
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.about-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.about-content p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-}
-
-/* Contact Block */
 .contact-block {
     max-width: 700px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.contact-card {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 40px 30px;
-    text-align: center;
+    margin: 50px auto;
 }
 
 .contact-card h2 {
-    font-size: 1.6rem;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 .contact-card p {
+    text-align: center;
     color: var(--text-muted);
-    margin-bottom: 25px;
-    font-size: 0.95rem;
+    margin-bottom: 20px;
 }
 
 .main-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .input-row {
     display: flex;
-    gap: 15px;
-}
-
-.input-row input {
-    flex: 1;
+    gap: 12px;
 }
 
 .main-form input, .main-form select, .main-form textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     font-family: inherit;
     font-size: 0.95rem;
+    background: #fff;
 }
 
 .send-btn {
@@ -309,14 +294,14 @@ body {
     color: #fff;
     border: none;
     padding: 12px;
-    border-radius: 4px;
-    font-weight: 600;
+    border-radius: 6px;
+    font-weight: 700;
     cursor: pointer;
 }
 
 .direct-contact {
-    margin-top: 25px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
     border-top: 1px solid var(--border-color);
     display: flex;
     justify-content: center;
@@ -329,7 +314,8 @@ body {
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
     display: none;
     align-items: center;
     justify-content: center;
@@ -344,7 +330,7 @@ body {
     background: #fff;
     width: 90%;
     max-width: 700px;
-    border-radius: 8px;
+    border-radius: 12px;
     position: relative;
     padding: 30px;
     max-height: 90vh;
@@ -354,16 +340,14 @@ body {
 .close-btn {
     position: absolute;
     top: 15px; left: 15px;
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+    border: none; background: none;
+    font-size: 1.6rem; cursor: pointer;
 }
 
 .modal-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 @media (max-width: 600px) {
@@ -375,21 +359,14 @@ body {
 
 .modal-media img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 4px;
+    max-height: 300px;
+    object-fit: contain;
 }
 
 .modal-price {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 800;
     margin: 10px 0;
-}
-
-.modal-info hr {
-    border: none;
-    border-top: 1px solid var(--border-color);
-    margin: 15px 0;
 }
 
 .modal-form {
@@ -400,10 +377,9 @@ body {
 }
 
 .modal-form input, .modal-form textarea {
-    padding: 10px;
-    border: 1px solid var(--border-color);
+    padding: 9px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: inherit;
 }
 
 footer {
@@ -411,6 +387,6 @@ footer {
     padding: 20px;
     font-size: 0.85rem;
     color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.95);
     border-top: 1px solid var(--border-color);
-    background: #ffffff;
 }
