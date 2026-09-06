@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Rubik:wght@700;800;900&display=swap');
 
 :root {
-  --bg-color: #f7f3ef;
-  --text-primary: #211915;       /* חום-שחור כהה לקריאות חדשה */
-  --text-secondary: #4a3d35;     /* חום עמוק לטקסט משני */
-  --accent-color: #8c6551;       /* גוון אדמה חם ומודגש */
+  --bg-color: #f2f3f5;
+  --text-primary: #1e2229;       /* אפור-פחם כהה ויוקרתי לקריאות מושלמת */
+  --text-secondary: #4a515e;     /* אפור-גרפיט לטקסט משני */
+  --accent-color: #5a6473;       /* אפור-עץ ניטרלי מודגש לכפתורים ולעדכונים */
+  --accent-hover: #3d4450;       /* אפור כהה יותר להובר */
   
-  /* רקע זכוכית חצי-שקוף ועדין להתמזגות מלטפת עם העץ */
-  --glass-bg: rgba(255, 255, 255, 0.68); 
-  --glass-border: rgba(255, 255, 255, 0.8);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  /* מעטפת זכוכית מלטפת המותאמת לעץ האפור */
+  --glass-bg: rgba(255, 255, 255, 0.85); 
+  --glass-border: rgba(255, 255, 255, 0.95);
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 
-  --card-bg: rgba(255, 255, 255, 0.92);
-  --pill-bg: rgba(255, 255, 255, 0.85);
-  --sold-red: #e62e3d;
+  --card-bg: #ffffff;
+  --pill-bg: rgba(240, 242, 245, 0.9);
+  --sold-red: #d93838;
   --font-main: 'Assistant', sans-serif;
   --font-heading: 'Rubik', sans-serif;
 }
@@ -21,7 +22,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-image: url('images/reka.png');
+    background-image: url('images/reka.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,15 +35,15 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.82);
+  background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 15px 40px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(220, 225, 230, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .logo img { height: 45px; width: auto; display: block; }
@@ -51,7 +52,7 @@ body {
 .nav-links a:hover { color: var(--accent-color); }
 .btn-dark { background-color: var(--text-primary); color: #fff; padding: 10px 22px; border-radius: 25px; text-decoration: none; font-weight: 600; }
 
-/* Hero Section - עיצוב זכוכית שקוף ועדין */
+/* Hero Section */
 .hero-section { 
   padding: 55px 30px 40px; 
   max-width: 850px; 
@@ -59,7 +60,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: var(--glass-shadow);
   border: 1.5px solid var(--glass-border);
   text-align: center;
@@ -70,7 +71,6 @@ body {
   font-weight: 900; 
   color: var(--text-primary);
   letter-spacing: -1px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 .hero-title .highlight { color: var(--accent-color); }
 .hero-subtitle { 
@@ -87,8 +87,8 @@ body {
   border-radius: 20px; 
   font-weight: 700; 
   color: var(--text-primary);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 /* Gallery Section */
@@ -99,7 +99,7 @@ body {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: var(--glass-shadow);
   border: 1.5px solid var(--glass-border);
   text-align: center;
@@ -120,15 +120,15 @@ body {
 
 /* Info Card Inside Gallery */
 .info-card {
-  background-color: rgba(255, 255, 255, 0.92);
-  border: 1px solid #e2d9d0;
+  background-color: #ffffff;
+  border: 1px solid #dce1e6;
   border-right: 6px solid var(--accent-color);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 28px 32px;
   max-width: 800px;
   margin: 35px auto;
   text-align: right;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 .info-card h3 { font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 14px; color: var(--text-primary); }
 .info-item { margin-bottom: 10px; font-size: 1rem; color: var(--text-secondary); line-height: 1.5; }
@@ -138,7 +138,7 @@ body {
 .category-filters { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .filter-btn {
   background-color: #ffffff;
-  border: 1.5px solid #d8cfc4;
+  border: 1.5px solid #d0d6dc;
   padding: 10px 28px;
   border-radius: 30px;
   font-family: var(--font-main);
@@ -153,12 +153,12 @@ body {
   background-color: var(--accent-color); 
   color: #ffffff; 
   border-color: var(--accent-color); 
-  box-shadow: 0 4px 12px rgba(140, 101, 81, 0.3);
+  box-shadow: 0 4px 12px rgba(90, 100, 115, 0.3);
 }
 .status-filters { display: flex; gap: 15px; align-items: center; justify-content: center; font-size: 0.95rem; color: var(--text-secondary); }
 .status-btn { background: none; border: none; font-family: var(--font-main); font-size: 0.95rem; color: var(--text-secondary); cursor: pointer; padding: 0; }
 .status-btn.active { color: var(--text-primary); font-weight: 700; }
-.divider { color: #d8cfc4; font-size: 0.85rem; }
+.divider { color: #d0d6dc; font-size: 0.85rem; }
 
 /* Gallery Grid & Cards */
 .gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
@@ -166,15 +166,15 @@ body {
   background-color: #ffffff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: right;
   display: flex; 
   flex-direction: column;
-  border: 1px solid rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.05);
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.09); }
 .card-image-wrap { position: relative; width: 100%; height: 240px; overflow: hidden; }
 .card-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -184,7 +184,7 @@ body {
   background-color: var(--sold-red); color: #ffffff;
   font-family: var(--font-main); font-size: 0.85rem; font-weight: 700;
   padding: 4px 16px; border-radius: 20px; z-index: 2;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .card figcaption { padding: 20px; display: flex; flex-direction: column; gap: 6px; }
 .card h3 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); }
@@ -192,30 +192,62 @@ body {
 .card-footer { display: flex; justify-content: flex-end; align-items: center; margin-top: 10px; }
 .price { font-family: var(--font-main); font-weight: 700; font-size: 1.2rem; color: var(--accent-color); direction: ltr; }
 
-/* Contact & Footer Section - עיצוב מחדש לפרטי התקשרות */
-.contact-section { 
-  max-width: 650px; 
-  margin: 50px auto 40px; 
-  padding: 35px 30px; 
+/* Form Elements & Contact - תיקון המעטפת לטפסים ולפרטים */
+.form-section, .contact-section { 
+  max-width: 680px; 
+  margin: 40px auto; 
+  padding: 40px 35px; 
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 24px;
   box-shadow: var(--glass-shadow);
   border: 1.5px solid var(--glass-border);
-  text-align: center;
+  text-align: right;
 }
-.contact-section h2 {
+
+.contact-section { text-align: center; }
+
+.form-section h2, .contact-section h2 {
   font-family: var(--font-heading);
   font-size: 1.8rem;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  text-align: center;
 }
-.contact-section p {
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-  margin-bottom: 18px;
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; text-align: right; }
+.form-group label { font-weight: 700; font-size: 0.95rem; color: var(--text-primary); }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; 
+  padding: 12px 15px; 
+  background-color: #ffffff;
+  border: 1.5px solid #d0d6dc; 
+  border-radius: 12px; 
+  font-family: var(--font-main); 
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
 }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.submit-btn {
+  background-color: var(--accent-color); 
+  color: #ffffff; 
+  border: none; 
+  padding: 14px; 
+  border-radius: 12px;
+  font-weight: 700; 
+  width: 100%; 
+  cursor: pointer; 
+  font-size: 1.05rem; 
+  transition: background 0.2s ease;
+}
+.submit-btn:hover { background-color: var(--accent-hover); }
+
 .contact-list { 
   list-style: none; 
   padding: 0; 
@@ -228,13 +260,34 @@ body {
   color: var(--text-primary);
 }
 
+/* Modal */
+.modal-backdrop {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.65); backdrop-filter: blur(5px);
+  display: none; align-items: center; justify-content: center; z-index: 1000;
+}
+.modal-backdrop.open { display: flex; }
+.modal-content {
+  background: #fff; border-radius: 20px; max-width: 800px; width: 90%;
+  max-height: 90vh; overflow-y: auto; position: relative; padding: 35px; text-align: right;
+}
+.modal-close { position: absolute; top: 15px; left: 20px; font-size: 2rem; background: none; border: none; cursor: pointer; color: var(--text-primary); }
+.modal-body { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 10px; }
+@media (max-width: 768px) { .modal-body { grid-template-columns: 1fr; } }
+.modal-gallery img { width: 100%; height: 280px; object-fit: contain; background: #f8f9fa; border-radius: 12px; }
+.modal-thumbs { display: flex; gap: 10px; margin-top: 10px; justify-content: center; }
+.modal-thumbs img { width: 60px; height: 60px; border-radius: 8px; cursor: pointer; opacity: 0.7; object-fit: cover; }
+.modal-thumbs img.active { opacity: 1; border: 2px solid var(--accent-color); }
+.modal-desc-text { color: var(--text-secondary); font-size: 1rem; margin: 10px 0; line-height: 1.5; }
+.modal-divider { border: 0; height: 1px; background: #eee; margin: 15px 0; }
+
 footer { 
   padding: 25px 20px; 
-  background: rgba(255, 255, 255, 0.75); 
+  background: rgba(255, 255, 255, 0.85); 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   text-align: center; 
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(220, 225, 230, 0.6);
   font-size: 0.95rem;
   color: var(--text-secondary);
   font-weight: 600;
