@@ -23,7 +23,7 @@
 
 body {
     /* טעינת הרקע - בודק בתיקיית images וגם בתיקייה הראשית */
-    background-image: url('images/reka.jpg'), url('reka.jpg');
+    background-image: url('images/reka.png'), url('reka.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
